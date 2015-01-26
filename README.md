@@ -15,7 +15,7 @@ package hangcover
 import "github.com/aybabtme/hangcover"
 ```
 
-Then running `go test github.com/aybabtme/hangcover` will fail with a:
+Then running `go test github.com/aybabtme/hangcover` will fail with an import cycle error:
 
 ```bash
 # github.com/aybabtme/hangcover
@@ -35,7 +35,7 @@ go test -cover github.com/aybabtme/hangcover
 Fetch this repository and run `./reproduce.sh`.
 
 ```bash
-./reproduce.sh
+$ ./reproduce.sh
 GOROOT=$(go env GOROOT)
 go env GOROOT
 GIT_DIR="$GOROOT/.git" git rev-parse --verify HEAD
